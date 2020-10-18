@@ -16,7 +16,7 @@ app.use(helmet());
 
 // middleware ended, app getting
 app.get('/', function(req, res) {
-  res.status(404).send('Not Found')
+  res.status(200).send('The backend is up and running')
 });
 
 app.use('/zip', require('./routes/zip'))
