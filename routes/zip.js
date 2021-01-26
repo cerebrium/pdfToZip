@@ -30,7 +30,7 @@ router.post('/', function (req, res) {
                     let getData = async function(urlNum, url) {
                         await fetch(url).then( response => response.blob()).then( response => response.arrayBuffer()).then( response => {
                             console.log('this is the response:', response, '\n', urlNum, '\n', url)
-                            pdfZip.file(`${nameAttay[urlNum]}.pdf`, response, {base64: true})
+                            pdfZip.file(`${nameAttay[urlNum]}.pdf`, response, {binary : true, compression : "DEFLATE"})
                             try {
                                 pdfZip.generateNodeStream({
                                     type:'nodebuffer',
