@@ -7,8 +7,8 @@ var path = require('path');
 
 // basic get route that tells you what to do
 router.get('/', function(req, res) {
-    let pathToPdf = path.join(__dirname, '/../pdfs.zip')
-    res.sendFile(pathToPdf)
+    // let pathToPdf = path.join(__dirname, '/../pdfs.zip')
+    // res.sendFile(pathToPdf)
 })
 
 // post route that does the zippingl
@@ -55,10 +55,11 @@ router.post('/', function (req, res) {
                     })
                     setTimeout( () => {
                         // trying to send the zip
-                        let pathToPdf = path.join(__dirname, '/../pdfs.zip')
+                        // let pathToPdf = path.join(__dirname, '/../pdfs.zip')
 
-                        res.sendFile(pathToPdf)
+                        // res.sendFile(pathToPdf)
                         // res.send('hello')
+                        res.status(200).send('finished')
 
                         // res.status(200).sendFile(pathToPdf, options)
                         console.log('file is sent')

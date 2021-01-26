@@ -9,7 +9,6 @@ var path = require('path');
 router.get('/', function(req, res) {
     let pathToPdf = path.join(__dirname, '/../pdfs.zip')
     res.sendFile(pathToPdf)
-
 })
 
 module.exports = router;
