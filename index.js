@@ -20,6 +20,7 @@ app.get('/', function(req, res) {
 });
 
 app.use('/zip', require('./routes/zip'))
+app.use('/tester', require('./routes/tester'))
 
 // have it listen to the localhost port
 var server = app.listen(process.env.PORT || 3001);
